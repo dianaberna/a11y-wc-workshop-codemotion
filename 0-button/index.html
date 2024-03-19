@@ -55,6 +55,21 @@
 
     <script type="module" src="script.js">
     </script>
+    <script>
+        // utility
+        function handleLink(event, url) {
+            var type = event.type;
+
+            if (type === "click" || (type === "keydown" && event.keyCode === 13)) {
+                window.location.href = url;
+
+                event.preventDefault();
+                event.stopPropagation();
+            }
+        }
+
+        document.querySelector('my-button').onClick = () => console.log('Pulsante cliccato!')
+    </script>
 
 
 </body>

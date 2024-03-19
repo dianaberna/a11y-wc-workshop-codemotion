@@ -6,7 +6,12 @@ class MyButton extends HTMLElement {
         const shadow = this.attachShadow({ mode: "open" });
         const button = document.createElement("button");
         button.innerText = this.getAttribute("text") || "Sono un pulsante";
-        button.addEventListener("click", () =>  console.log("evento click del pulsante versione 1"))
+        /* button.addEventListener("click", () =>  console.log("evento click del pulsante versione 1")) */
+        button.addEventListener('click', () => {
+            if (typeof this.onClick === 'function') {
+              this.onClick();
+            }
+          });
 
         const version = this.getAttribute("version");
         button.classList.add(version || "btn-primary");
@@ -97,15 +102,3 @@ class MyButtonWithTemplate extends HTMLElement {
 customElements.define("my-button-with-template", MyButtonWithTemplate);
 
 export default MyButtonWithTemplate;
-
-// utility
-function handleLink(event, url) {
-    var type = event.type;
-
-    if (type === "click" || (type === "keydown" && event.keyCode === 13)) {
-        window.location.href = url;
-
-        event.preventDefault();
-        event.stopPropagation();
-    }
-}
