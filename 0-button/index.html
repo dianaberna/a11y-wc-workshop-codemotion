@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulsanti</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+        body {
+            font-family: "Roboto Mono", monospace;
+        }
+
+        button,
+        input {
+            font-family: inherit;
+            font-weight: 600;
+
+            border: 2px solid black;
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+        }
+
+        .link {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pulsanti</h1>
+
+    <h2>Tag nativi</h2>
+    <button>sono un pulsante</button>
+    <input type="button" value="sono un pulsante input">
+
+    <hr>
+
+    <h2>Web components</h2>
+    <my-button version="btn-primary" text="sono un pulsante con web component versione 1"></my-button>
+    <button version="btn-primary" text="sono un pulsante con web component versione 2" is="my-custom-button"></button>
+    <my-button-with-template version="btn-primary">sono un pulsante con web component versione 3</my-button-with-template>
+
+    <hr>
+
+    <h2>Link</h2>
+    <a href="#">link nativo</a>
+    <span class="link" tabindex="0" role="link" onclick="handleLink(event, '#')" onkeydown="handleLink(event, '#')"> link
+        con web component</span>
+
+
+    <script type="module" src="script.js">
+    </script>
+
+
+</body>
+
+</html>

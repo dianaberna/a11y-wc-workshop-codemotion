@@ -1,0 +1,40 @@
+            
+.card{
+    font-family: "Nunito", sans-serif;
+    border: 1px solid #b7b7b7;
+    width: 20rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.card-image{
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+.card-name{
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+.card-role{
+    color: dimgray;
+    margin-left: 1rem;
+}
+.card-link-container{
+    margin: 0.75rem 1rem;
+}
+.card-link{
+    color: black;
+    font-size: 1.4rem;
+}
+my-button-with-template{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+svg{
+    width: 1.5rem;
+    height: 1.5rem;
+}

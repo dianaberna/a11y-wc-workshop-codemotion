@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+        body{
+            display: flex;
+            gap: 2rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- versione 1 -->
+    <my-card name="Mario Rossi" role="Web Developer" link-ig="#" image="https://randomuser.me/api/portraits/men/1.jpg" alt="foto di un uomo con i capelli corti e la camicia"></my-card>
+    <script type="module" src="script.js"></script>
+    
+     <!-- versione 2 -->
+    <my-card-slot link-fb="#" image="https://randomuser.me/api/portraits/men/2.jpg" alt="">
+        <span slot="name">Luigi Bianchi</span>
+        <span slot="role">Designer</span>
+    </my-card-slot>
+    <script type="module" src="script2.js"></script>
+    
+</body>
+</html>
